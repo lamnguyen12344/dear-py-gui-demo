@@ -1,6 +1,13 @@
 import dearpygui.dearpygui as dpg
 
 dpg.create_context()
+# Generate unique ids for all widgets we want to change in runtime
+wind_id = dpg.generate_uuid()
+temp_id = dpg.generate_uuid()
+output_id = dpg.generate_uuid()
+
+def callback():
+    output = "Wind Value:"
 dpg.create_viewport(title='Custom Title', width=600, height=300)
 
 with dpg.window(label="Example Window"):
